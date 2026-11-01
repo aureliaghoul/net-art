@@ -1,0 +1,143 @@
+:root {
+  --bg: #1a1416;        
+  --text: #f3ead8;      
+  --rose: #c9a0a8;     
+  --wine: #7a2e3b;     
+}
+
+
+body {
+margin: 0;
+  overflow: hidden;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Glass Antiqua', Georgia, serif;  font-size: 20px;
+  line-height: 1.6;
+}
+
+.left {
+    width:25%;
+    float:left;
+padding: 40px 30px;    
+height: 100vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+  
+h1 {
+  font-family: 'Pinyon Script', cursive;
+  font-weight: normal;
+  font-size: 56px;
+  line-height: 1.1;
+  color: var(--rose);
+  margin: 0 0 10px;
+}
+ 
+h2 {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--rose);
+  margin: 0 0 30px;
+}
+
+h2::after {
+  content: ""────── ୨୧ ──────"";
+  display: block;
+  margin-top: 15px;
+  font-style: normal;
+}
+
+
+  .right {
+    width:70%;
+    float:right;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height:100vh;
+    padding: 40px 40px 40px 0;
+    box-sizing: border-box;
+  }
+  
+  .work {
+  border: 1px solid var(--rose);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 50px;
+  background-color: #241b1e;
+  box-shadow: 0 0 25px rgba(201, 160, 168, 0.15); 
+}
+
+
+  img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--rose);
+  filter: sepia(30%);            
+  transition: filter 0.4s;
+}
+
+img:hover {
+  filter: sepia(0%);             
+}
+ 
+h3 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px 0 0;
+}
+ 
+.label {
+  font-style: italic;
+  color: var(--rose);
+  margin-top: 0;
+}
+ 
+a {
+  color: var(--rose);
+  text-decoration: none;
+  border-bottom: 1px solid var(--wine);
+  transition: color 0.3s;
+}
+ 
+a:hover {
+  color: var(--text);
+}
+  
+  @media screen and (max-width: 992px) {
+    body {
+        overflow: auto;
+    }
+
+
+    .left {
+      width:60%;
+      float:none;
+      margin:0 auto;
+      text-align:center;
+      padding:30px 0;
+      height: auto;
+      overflow: visible;
+    }
+    .right {
+      width:80%;
+      text-align:center;
+      float:none;
+      margin:0 auto;
+      overflow-y:hidden;
+      overflow-x:hidden;
+      height:auto;
+      padding: 20px 0;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .left {
+      width:100%;
+      padding: 20px;
+    }
+    .right {
+      width:100%;
+      padding: 20px;
+    }
+  }
